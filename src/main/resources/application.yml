@@ -1,0 +1,17 @@
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8099/realms/Tadiwa
+          jwk-set-uri: http://localhost:8099/realms/Tadiwa/protocol/openid-connect/certs
+
+server:
+  port: 8098
+
+
+jwt:
+  auth:
+    converter:
+      resource-id: tadiwa-rest-api
+      principle-Attribute: principleAttribute
